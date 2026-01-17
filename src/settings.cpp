@@ -7,31 +7,31 @@ Settings::Settings(unsigned int size) {
 }
 
 void Settings::loadVar(int addr, byte &var) {
-    if (addr >= 0 && addr < 1024) {
+    if (addr >= 0 && addr < eepromSize) {
         var = EEPROM.read(addr);
     }
 }
 
 void Settings::resetAll(byte val) {
-    for (int i = 0; i < 1024; i++) {
+    for (int i = 0; i < eepromSize; i++) {
         EEPROM.update(i, val);
     }
 }
 
 void Settings::save(int addr, byte val) {
-    if (addr >= 0 && addr < 1024) {
+    if (addr >= 0 && addr < eepromSize) {
         EEPROM.update(addr, val);
     }
 }
 
 void Settings::saveBool(int addr, bool val) {
-    if (addr >= 0 && addr < 1024) {
+    if (addr >= 0 && addr < eepromSize) {
         EEPROM.update(addr, val);
     }
 }
 
 byte Settings::load(int addr) {
-    if (addr >= 0 && addr < 1024) {
+    if (addr >= 0 && addr < eepromSize) {
         return EEPROM.read(addr);
     }
     return 0;
@@ -47,4 +47,5 @@ byte Settings::loadClamped(int addr, byte minVal, byte maxVal) {
   }
   return v;
 }
+
 
