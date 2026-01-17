@@ -17,13 +17,13 @@ public:
     // Сохранить значение по адресу addr
     static void save(int addr, byte val);
 
-    // Сохранить байт по адресу addr
+    // Сохранить логическое значение по адресу addr
     static void saveBool(int addr, bool val);
 
     // Прочитать байт с EEPROM
     static byte load(int addr);
 
-    // Загрузить байт по адресу в переменную
+    // Прочитать байт по адресу в переменную
     static void loadVar(int addr, byte &var);
 
     // Прочитать байт с EEPROM, но только в области, задаваемой параметрами
