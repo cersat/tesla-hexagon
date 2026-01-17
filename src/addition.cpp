@@ -94,6 +94,10 @@ void startTimer() {
   timer = millis();
 }
 
-long endTimer() {
+long getTimer() {
   return millis() - timer;
+}
+
+void endTimer() {
+  timer = 0;
 }
