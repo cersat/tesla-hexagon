@@ -8,10 +8,10 @@ extern unsigned int eepromSize;
 
 class Settings {
 public:
-
+    // Инициализатор, можно добавить размер EEPROM для использования в других платах
     Settings(unsigned int size = 1024);
 
-    // Стереть всё
+    // Затереть все значения в памяти нулями. Можно выбрать другое значение
     static void resetAll(byte val = 0);
     
     // Сохранить значение по адресу addr
