@@ -1,12 +1,13 @@
 #include "addition.h"
 #include "twocolor.h"
+#include "HexagonPins.h"
 
 long timer = 0;
 
 bool buttonPress (int btn) {
-  if (btn == 1) return (!digitalRead(A2));
-  if (btn == 2) return (!digitalRead(A1));
-  if (btn == 3) return (!digitalRead(A0));
+  if (btn == 1) return (!digitalRead(sensors_b1));
+  if (btn == 2) return (!digitalRead(sensors_b2));
+  if (btn == 3) return (!digitalRead(sensors_b3));
   return 0;
 }
 
