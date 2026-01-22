@@ -1,8 +1,9 @@
 #include "twocolor.h"
+#include "HexagonPins.h"
 
 bool invertColorLed = false;
-byte pin1 = 3;
-byte pin2 = 6;
+byte pin1 = twoColorLed_p1;
+byte pin2 = twoColorLed_p2;
 
 void TwoColorLed::control(TwoColorLedColor color) {
   digitalWrite (pin1, color == Red);
