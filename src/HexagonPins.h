@@ -15,8 +15,9 @@ extern pin sensors_b3 = A0;
 extern pin sensors_pot = A3;
 extern pin ipsDisplay_rst = 4;
 extern pin ipsDisplay_dc = 10;
-
-
+extern pin ipsDisplay_sid = 12;
+extern pin ipsDisplay_sclk = 13;
+//extern pin  =  ;
 
 
 #endif
